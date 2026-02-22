@@ -1,0 +1,47 @@
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0.5em 0;
+  gap: 0.75em;
+}
+
+.gallery-item {
+  margin: auto 0;
+}
+
+.painting-container {
+  display: block;
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  inset: 0;
+  box-shadow: none;
+  transition: box-shadow 1s
+}
+
+.preview {
+  max-width: 100%;
+  max-height: 10em;
+}
+.appear-on-hover {
+  width: 0;
+  overflow: hidden;
+  transition: width 1s;
+}
+.painting-container:hover{
+  box-shadow: 0 0 3px white, 0 0 15px #cce4ff;
+}
+.preview:hover ~ .appear-on-hover {
+  width: 100%;
+}
+
+.date {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background-image: linear-gradient(to right, black, rgba(0,0,0,0));
+}
