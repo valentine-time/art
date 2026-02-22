@@ -1,0 +1,69 @@
+body {
+	margin: 0px;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: stretch;
+  background-image: url("../img/global_bg.jpeg");
+}
+
+.top-border {
+	position: absolute;
+	top: 0;
+	height: 1.8em;
+	width: 100%;
+	z-index: -1;
+	background-image: linear-gradient(#cccccc 10%, #808080 60%, #333333 80%, #cccccc);
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3em;
+  row-gap: 0.3em;
+	width: fit-content;
+  padding: 0.5em 2em 1em;
+	border-radius: 0px 0px 100% 100%;
+	background-image: radial-gradient(ellipse at 5% 5%, #cccccc 23%, #808080 46%, #333333 80%, #cccccc)
+}
+
+.site-title {
+  font-size: 1.5rem;
+  margin: 0;
+  text-shadow: 0 0 5px red, 0 0 15px #ffbf00;
+}
+
+nav {  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 1.2em;
+  row-gap: 0.3em;
+}
+
+nav a {
+  font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	text-shadow: 3px 3px 5px black;
+}
+nav a:hover {
+  text-shadow: 0 0 2px red, 0 0 10px #ffbf00;
+}
+nav a:focus {
+  text-shadow: 0 0 2px red, 0 0 10px #ffbf00;
+	outline: 2px ridge orange;
+}
+
+iframe {
+	display: block;
+	width: 100%;
+	max-width: 900px;
+	height: 100%;
+  border: none;
+}
