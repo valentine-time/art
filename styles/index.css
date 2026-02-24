@@ -3,14 +3,23 @@ html, body {
   width:  100%;
 }
 
+html {
+  background-color: #01041e;
+}
+
 body {
 	margin: 0px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: stretch;
-  background-color: ##01041e;
   background-image: url("../img/global_bg.jpeg");
+}
+
+header {
+  position: relative;
+  top: env(safe-area-inset-top, 0);
+  width: 100%;
 }
 
 .top-border {
@@ -18,19 +27,25 @@ body {
 	top: 0;
 	height: 1.8em;
 	width: 100%;
-	z-index: -1;
+	z-index: 1;
 	background-image: linear-gradient(#cccccc 10%, #808080 60%, #333333 80%, #cccccc);
 }
 
-header {
+.nav-container {
+  /* self size & positioning */
+  margin: 0 auto;
+  position: relative; /* necessary for z index to work */
+	width: fit-content;
+  z-index: 2;
+  /* contents positioning */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   column-gap: 3em;
   row-gap: 0.3em;
-	width: fit-content;
   padding: 0.5em 2em 1em;
+  /* colours */
 	border-radius: 0px 0px 100% 100%;
 	background-image: radial-gradient(ellipse at 5% 5%, #cccccc 23%, #808080 46%, #333333 80%, #cccccc)
 }
