@@ -8,6 +8,19 @@ body {
 	color: white;
 }
 
+h1, h2 {
+	background-image: linear-gradient(#cccccc 10%, #808080 60%, #333333 80%, #cccccc);
+  border-radius: 0.25em;
+  margin: 0;
+  padding: 0.25em 0.5em;
+	text-shadow: 3px 3px 5px black;
+  width: 100%;
+}
+
+p {
+  margin: 1em;
+}
+
 .center-text {
 	text-align: center;
 	width: 100%;
@@ -20,4 +33,9 @@ body {
 .laser-border {
   border: 25px solid transparent;
 	border-image: url("../img/border_orange.png") 38 stretch;
+}
+
+.laser-border-blue {
+  border: 25px solid transparent;
+	border-image: url("../img/border_blue.png") 38 stretch;
 }
