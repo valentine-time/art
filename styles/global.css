@@ -4,7 +4,7 @@
 
 body {
 	font-family: Helvetica, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
 	color: white;
 }
 
@@ -26,9 +26,17 @@ p {
 	width: 100%;
 }
 
+/* backgrounds */
+
 .dimmer-bg {
 	background-image: radial-gradient(circle, black, rgba(0,0,0,0));
 }
+
+.pixel-bg { 
+  background-image: url("../img/pixel_bg.png");
+}
+
+/* borders */
 
 .laser-border {
   border: 25px solid transparent;
@@ -38,4 +46,9 @@ p {
 .laser-border-blue {
   border: 25px solid transparent;
 	border-image: url("../img/border_blue.png") 38 stretch;
+}
+
+.metal-border {
+  border: 25px solid transparent;
+  border-image: url("../img/border_metal.png") 47 stretch;
 }
