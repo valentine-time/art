@@ -56,6 +56,9 @@ header {
   margin: 0;
   text-shadow: 0 0 5px red, 0 0 15px #ffbf00;
 }
+.site-title:hover {
+  text-shadow: 0 0 5px red, 0 0 15px #ffbf00, 0 0 30px yellow;
+}
 
 nav {  
   display: flex;

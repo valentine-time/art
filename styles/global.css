@@ -17,6 +17,18 @@ h1, h2 {
   width: 100%;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  text-shadow: 0 0 0.4em red, 0 0 1em #ffbf00;
+}
+a:focus {
+	outline: 2px ridge orange;
+}
+a:hover {
+  text-shadow: 0 0 0.4em red, 0 0 1em #ffbf00, 0 0 2em yellow;
+}
+
 p {
   margin: 1em;
 }
@@ -24,6 +36,17 @@ p {
 .center-text {
 	text-align: center;
 	width: 100%;
+}
+
+.inline-image {
+  display: inline;
+  height: 0.85em;
+  padding: 0 0.1em;
+}
+
+.no-wrap {
+  display: inline-block;
+  whitespace: nowrap;
 }
 
 /* backgrounds */
