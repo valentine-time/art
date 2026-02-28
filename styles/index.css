@@ -51,6 +51,7 @@ header {
 }
 
 .site-title {
+  border: none;
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
@@ -69,6 +70,7 @@ nav {
 }
 
 nav a {
+  border: none;
   font-size: 1rem;
 	font-weight: bold;
 	color: white;

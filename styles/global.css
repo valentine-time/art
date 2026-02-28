@@ -18,6 +18,8 @@ h1, h2 {
 }
 
 a {
+  border-bottom: 0.4em solid transparent;
+	border-image: url("../img/laser_border_red.png") 38 stretch;
   color: inherit;
   text-decoration: none;
   text-shadow: 0 0 0.4em red, 0 0 1em #ffbf00;
@@ -40,7 +42,7 @@ p {
 
 .inline-image {
   display: inline;
-  height: 0.85em;
+  height: 0.8em;
   padding: 0 0.1em;
 }
 
