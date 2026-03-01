@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  scrollbar-color: #ffa36c #01041e;
 }
 
 html {
@@ -63,26 +64,14 @@ p {
   margin: 1em;
 }
 
-.center-text {
-	text-align: center;
-	width: 100%;
-}
-
-.inline-image {
-  display: inline;
-  height: 0.8em;
-  padding: 0 0.1em;
-}
-
-.no-wrap {
-  display: inline-block;
-  whitespace: nowrap;
-}
-
 /* backgrounds */
 
 .dimmer-bg {
 	background-image: radial-gradient(circle, black, rgba(0,0,0,0));
+}
+
+.metal-bg {
+	background-image: radial-gradient(ellipse at 5% 5%, #cccccc 23%, #808080 46%, #333333 80%, #cccccc);
 }
 
 .pixel-bg { 
@@ -104,4 +93,28 @@ p {
 .metal-border {
   border: 25px solid transparent;
   border-image: url("../img/border_metal.png") 47 stretch;
+}
+
+/* utility */
+
+.center-text {
+	text-align: center;
+	width: 100%;
+}
+
+.inline-image {
+  display: inline;
+  height: 0.8em;
+  padding: 0 0.1em;
+}
+
+.inner-border {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.no-wrap {
+  display: inline-block;
+  whitespace: nowrap;
 }
