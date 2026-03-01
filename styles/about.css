@@ -18,8 +18,7 @@
 .instax-container {
   display: flex;
   flex-flow: row nowrap;
-  overflow-x: scroll;
-  scrollbar-gutter: stable;
+  overflow-x: auto;
   padding: 0.5em 1.5em;
   gap: 1em;
   align-items: center;
