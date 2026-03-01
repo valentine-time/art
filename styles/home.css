@@ -1,3 +1,22 @@
 .home {
-	
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.featured-art, .selfie {
+  width: 100%;
+  padding: 1em;
+}
+
+.about-intro {
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  display: grid;
+}
+@media screen and (width <= 35em) {
+  .about-intro {
+    grid-template-columns: 100%;
+  }
 }

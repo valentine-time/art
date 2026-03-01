@@ -13,8 +13,12 @@ h1, h2 {
   border-radius: 0.25em;
   margin: 0;
   padding: 0.25em 0.5em;
+  text-align: center;
 	text-shadow: 3px 3px 5px black;
   width: 100%;
+}
+h3 {
+  text-align: center;
 }
 
 a {
