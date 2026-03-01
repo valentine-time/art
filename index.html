@@ -2,31 +2,71 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="styles/global.css">
-  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/home.css">
   
   <meta name="author" content="Valentine">
   <meta name="charset" content="utf-8">
   <meta name="theme-color" content="#01041e">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Valentine Art</title>
+  <title>Valentine Art | Home</title>
 </head>
 <body>
-
-
+<!--| HEADER/NAVBAR |---------------------------------------------------------->
 <header>
   <div class="top-border"></div>
   <div class="nav-container">
-    <a href="home.html" target="frame" class="site-title">Valentine</a>
+    <a href="index.html" class="site-title">Valentine</a>
     <nav>
-      <a href="about.html" target="frame">about</a>
-      <a href="gallery.html" target="frame">gallery</a>
-      <a href="commissions.html" target="frame">commissions</a>
-      <a href="contact.html" target="frame">contact</a>
+      <a href="about.html">about</a>
+      <a href="gallery.html">gallery</a>
+      <a href="commissions.html">commissions</a>
+      <a href="contact.html">contact</a>
     </nav>
   </div>
 </header>
 
-<iframe src="home.html" name="frame" id="mainframe" title="Page Contents"></iframe>
+<!--| CONTENT |---------------------------------------------------------------->
+<article class="home">
+  <div class="laser-border">
+    <h2>Most Recent Work</h2>
 
+    <img class="featured-art" src="./paintings/red_jeep/flat.jpg" />
+
+    <p>
+    Check out the rest of my paintings in the
+    <a href="./gallery.html">art gallery</a>!
+    </p>
+  </div>
+
+  <div class="laser-border">
+    <h2>Comms</h2>
+    <h3>Commissions and Communication</h3>
+
+    <p>
+    Read all about my 
+    <a href="./commissions.html">
+      commission process and materials,
+    </a>
+    and get in
+    <a href="./contact.html">contact</a> with me!
+    I would love to hear from you, and any feedback on my art or website!
+  </div>
+  
+  <div class="about-intro laser-border">
+    <div class="about-column">
+      <img class="selfie" src="./img/me.jpg" />
+    </div>
+    <div class="about-column">
+      <h2>About the Artist</h2>
+
+      <p>
+      Acrylic painter based in Calgary.
+      Want to learn a little more?
+      <a href="./about.html">Get to know me</a>!
+      </p>
+    </div>
+  </div>
+</article>
 </body>
 </html>

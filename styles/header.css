@@ -1,23 +1,8 @@
-html, body {
-  height: 100lvh;
-  width:  100%;
-}
-html {
-  background-color: #01041e;
-}
-body {
-	margin: 0px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: stretch;
-  background-image: url("../img/global_bg.jpeg");
-}
-
 header {
-  position: relative;
+  position: sticky;
   top: env(safe-area-inset-top, 0);
   width: 100%;
+  z-index: 10;
 }
 
 .top-border {
@@ -27,6 +12,7 @@ header {
 	width: 100%;
 	z-index: 1;
 	background-image: linear-gradient(#cccccc 10%, #808080 60%, #333333 80%, #cccccc);
+  box-shadow: 0 0.1em 0.5em black;
 }
 
 .nav-container {
@@ -45,7 +31,8 @@ header {
   padding: 0.5em 2em 1em;
   /* colours */
 	border-radius: 0px 0px 100% 100%;
-	background-image: radial-gradient(ellipse at 5% 5%, #cccccc 23%, #808080 46%, #333333 80%, #cccccc)
+	background-image: radial-gradient(ellipse at 5% 5%, #cccccc 23%, #808080 46%, #333333 80%, #cccccc);
+  box-shadow: 0 0.1em 0.5em black;
 }
 
 .site-title {
@@ -83,10 +70,6 @@ nav a:focus {
 	outline: 2px ridge orange;
 }
 
-iframe {
-	display: block;
-	width: 100%;
-	max-width: 900px;
-	height: 100%;
-  border: none;
+nav a.current {
+  color: #ffa36c;
 }

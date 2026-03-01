@@ -1,10 +1,3 @@
-.home {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin-top: 1em;
-}
-
 .featured-art, .selfie {
   width: 100%;
   padding: 1em;
