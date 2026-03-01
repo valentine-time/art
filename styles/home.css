@@ -5,10 +5,10 @@
 
 .about-intro {
   align-items: center;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 25% 75%;
   display: grid;
 }
-@media screen and (width <= 35em) {
+@media screen and (width <= 30em) {
   .about-intro {
     grid-template-columns: 100%;
   }
