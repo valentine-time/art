@@ -36,6 +36,12 @@
 .preview:hover ~ .appear-on-hover {
   width: 100%;
 }
+@media (hover: none) {
+  .appear-on-hover {
+    width: 100%;
+    transition: none;
+  }
+}
 
 .date {
   position: absolute;

@@ -1,11 +1,17 @@
-.selfie {
-  float: right;
+.selfie-left, .selfie-right {
   padding: 1em;
-  transition: width 1s;
+  transition: padding 1s, width 1s;
   width: 25%;
 }
+.selfie-left {
+  float: left;
+}
+.selfie-right {
+  float: right;
+}
 @media screen and (width <= 30em) {
-  .selfie {
+  .selfie-left, .selfie-right {
+    padding: 2em;
     width: 100%;
   }
 }

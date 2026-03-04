@@ -2,6 +2,12 @@
   box-sizing: border-box;
   scrollbar-color: #999999 #383838;
 }
+@media (prefers-reduced-motion) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 
 html {
   background: #01041e;
