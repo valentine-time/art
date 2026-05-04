@@ -8,7 +8,7 @@ header {
 .top-border {
 	position: absolute;
 	top: 0;
-	height: 1.8em;
+	height: 2em;
 	width: 100%;
 	z-index: 1;
 	background-image: linear-gradient(#cccccc 10%, #808080 60%, #333333 80%, #cccccc);
@@ -28,7 +28,7 @@ header {
   align-items: center;
   column-gap: 3em;
   row-gap: 0.3em;
-  padding: 0.5em 2em 1em;
+  padding: 0.1em 2em 1em;
   /* colours */
 	border-radius: 0px 0px 100% 100%;
 	background-image: radial-gradient(ellipse at 5% 5%, #cccccc 23%, #808080 46%, #333333 80%, #cccccc);
@@ -40,16 +40,23 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
-  text-shadow: 0 0 5px red, 0 0 15px #ffbf00;
+  filter: drop-shadow(0 0 5px red) drop-shadow(0 0 15px #ffbf00);
 }
 .site-title:hover {
-  text-shadow: 0 0 5px red, 0 0 15px #ffbf00, 0 0 30px yellow;
+  filter: drop-shadow(0 0 5px red) drop-shadow(0 0 15px #ffbf00) drop-shadow(0 0 30px yellow);
+}
+
+.site-title img {
+  display: inline;
+  height: 2.5rem;
+  width: auto;
 }
 
 nav {  
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  padding-top: 0.5em;
   column-gap: 1.2em;
   row-gap: 0.3em;
 }
