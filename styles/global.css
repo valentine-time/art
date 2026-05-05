@@ -1,104 +1,108 @@
 * {
-  box-sizing: border-box;
-  scrollbar-color: #999999 #383838;
+	box-sizing: border-box;
+	scrollbar-color: #999999 #383838;
 }
 @media (prefers-reduced-motion) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
+	* {
+		animation: none !important;
+		transition: none !important;
+	}
 }
 
 html {
-  background: #01041e;
+	background: #01041e;
 }
 body {
-  background: fixed url("../img/global_bg.jpeg");
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  margin: 0;
-  min-height: 100lvh;
-  overscroll: none;
-  /* content positioning */
-  align-items: center;
-  justify-content: stretch;
-  /* text styling */
+	background: fixed url("../img/backgrounds/space.jpeg");
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	margin: 0;
+	min-height: 100lvh;
+	overscroll: none;
+	/* content positioning */
+	align-items: center;
+	justify-content: stretch;
+	/* text styling */
 	color: white;
 	font-family: Helvetica, sans-serif;
-  font-size: 1rem;
+	line-height: 1.5;
+	font-size: 1rem;
 }
 
 article {
-  margin-top: 1em;
-  max-width: 56em;
-  width: 100%;
-  
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+	margin: 1em 0;
+	max-width: 56em;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
 }
 
 h1, h2 {
-	background-image: linear-gradient(#cccccc 10%, #808080 60%, #333333 80%, #cccccc);
-  border-radius: 0.25em;
-  margin: 0;
-  padding: 0.25em 0.5em;
-  text-align: center;
-	text-shadow: 3px 3px 5px black;
-  width: 100%;
+	margin: 0;
+	padding: 0.25em 0.5em;
+	text-align: center;
+	width: 100%;
 }
 h3 {
-  text-align: center;
+	text-align: center;
 }
 
 a {
-  border-bottom: 0.4em solid transparent;
-	border-image: url("../img/laser_border_red.png") 38 stretch;
-  color: inherit;
-  text-decoration: none;
-  text-shadow: 0 0 0.4em red, 0 0 1em #ffbf00;
+	border: 0.4em solid transparent;
+	border-image: url("../img/borders/laser-underline_BLUE.png") 45% stretch;
+	color: inherit;
+	text-decoration: none;
+	filter: drop-shadow(0 0 0.2em #36d9ff) drop-shadow(0 0 0.3em #3232cd);
 }
 a:focus {
 	outline: 2px ridge orange;
 }
 a:hover {
-  text-shadow: 0 0 0.4em red, 0 0 1em #ffbf00, 0 0 2em yellow;
+	filter: drop-shadow(0 0 0.1em #ff784f) drop-shadow(0 0 0.5em red) ;
+	filter: drop-shadow(0 0 0.1em yellow) drop-shadow(0 0 0.5em red);
 }
 
 p {
-  margin: 1em;
+	margin: 1em;
 }
 
 /* backgrounds */
 
 .dimmer-bg {
-	background-image: radial-gradient(circle, black, rgba(0,0,0,0));
+	background-image: url("../img/backgrounds/holo.png");
+	background-size: 100%;
+	background-repeat: repeat-y;
+	background-clip: padding-box;
+	backdrop-filter: blur(3px);
+	text-shadow: 0.2em 0.2em 0.3em #001b4e;
 }
 
 .metal-bg {
 	background-image: radial-gradient(ellipse at 5% 5%, #cccccc 23%, #808080 46%, #333333 80%, #cccccc);
 }
 
-.pixel-bg { 
-  background-image: url("../img/pixel_bg.png");
+.pixel-bg {
+	background-image: url("../img/backgrounds/pixel.png");
 }
 
 /* borders */
 
 .laser-border {
-  border: 25px solid transparent;
-	border-image: url("../img/border_orange.png") 38 stretch;
+	border: 25px solid transparent;
+	border-image: url("../img/borders/laser-with-metal-bars_RED.png") 86 stretch;
 }
 
 .laser-border-blue {
-  border: 25px solid transparent;
-	border-image: url("../img/border_blue.png") 38 stretch;
+	border: 25px solid transparent;
+	border-image: url("../img/borders/laser-full_BLUE.png") 38 stretch;
 }
 
 .metal-border {
-  border: 25px solid transparent;
-  border-image: url("../img/border_metal.png") 47 stretch;
+	border: 25px solid transparent;
+	border-image: url("../img/borders/metal.png") 47 stretch;
 }
 
 /* utility */
@@ -109,18 +113,21 @@ p {
 }
 
 .inline-image {
-  display: inline;
-  height: 0.8em;
-  padding: 0 0.1em;
+	display: inline;
+	height: 0.8em;
+	padding: 0 0.1em;
 }
 
 .inner-border {
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
+	inset: 0;
+	pointer-events: none;
+	position: absolute;
 }
 
 .no-wrap {
-  display: inline-block;
-  whitespace: nowrap;
+	white-space: nowrap;
+}
+
+.scroll-x {
+	overflow-x: auto;
 }
