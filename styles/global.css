@@ -32,6 +32,7 @@ body {
 
 article {
 	margin: 1em 0;
+	margin-left: env(safe-area-inset-left);
 	max-width: 56em;
 	width: 100%;
 
@@ -61,8 +62,9 @@ a:focus {
 	outline: 2px ridge orange;
 }
 a:hover {
-	filter: drop-shadow(0 0 0.1em #ff784f) drop-shadow(0 0 0.5em red) ;
 	filter: drop-shadow(0 0 0.1em yellow) drop-shadow(0 0 0.5em red);
+	text-shadow: none;
+	border-image: url("../img/borders/laser-underline_RED.png") 45% stretch;
 }
 
 p {
