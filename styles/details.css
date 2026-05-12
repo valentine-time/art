@@ -1,0 +1,17 @@
+.hd {
+  display: block;   /* so margin auto works */
+  width: 95%;
+  margin: 1em auto; /* centre horizontally, add some space vertically */
+}
+
+.date-container {
+  width: fit-content;
+  margin: 0 auto;
+}
+.date {
+  margin: 0;
+}
+
+.date::before {
+  content: "Completed on ";
+}
