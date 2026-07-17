@@ -1,0 +1,9 @@
+{
+  "title": "artwork title",
+  "alt": "alt text for the main flat image.",
+  "date": "2026/05/21 (date artwork completed)",
+  "size": "10\"&times;8\" (x y)",
+  "materials": "Acrylic on canvas.",
+  "description": "displayed description of work. leave blank for no description",
+  "extra image path": "./extra-img/ (relative to where the details.html file will end up)"
+}

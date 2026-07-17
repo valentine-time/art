@@ -15,3 +15,27 @@
 .date::before {
   content: "Completed on ";
 }
+
+.extra-img-bg {
+  position: relative;
+  margin: 0.5em auto;
+  padding: 1em 0;
+  height: fit-content;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.extra-img-container {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  padding: 0.5em 1.5em;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.extra-img {
+  width: 70vw;
+  max-width: 39em;
+}

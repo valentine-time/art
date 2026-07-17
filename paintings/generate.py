@@ -1,7 +1,19 @@
 import json
 import os
+import pathlib
 import shutil
 import sys
+
+
+EXTRA_IMG_TEMPLATE = '\n      <img class="extra-img"  src="PATH" />'
+
+EXTRA_IMG_CONTAINER_TEMPLATE = """
+  <div class="extra-img-bg metal-bg">
+    <div class="inner-border metal-border"></div>
+    <div class="extra-img-container">EXTRA IMAGES
+    </div>
+  </div>
+"""
 
 
 def read_json(path: str) -> dict:
@@ -31,9 +43,39 @@ def read_template(file_path: str) -> str | None:
         return
 
 
-def fill_template(template: str, data: dict) -> str | None:
+def gen_extra_img_string(base_path: str, img_path: str) -> str | None:
+    base_path = pathlib.Path(base_path)
+    img_path = pathlib.Path(img_path)
+    path = base_path / img_path
+
+    if not path.exists():
+        return
+
+    if path.is_file():
+        return EXTRA_IMG_TEMPLATE.replace("PATH", str(img_path))
+
+    if path.is_dir():
+        img_str = ""
+        for f in path.iterdir():
+            # make path local to the destination folder
+            local_path = str(f).replace(str(base_path), ".", 1)
+            img_str += EXTRA_IMG_TEMPLATE.replace("PATH", local_path)
+
+        return EXTRA_IMG_CONTAINER_TEMPLATE.replace("EXTRA IMAGES", img_str)
+
+    return
+
+
+def fill_template(template: str, data: dict, path: str) -> str | None:
     out = template
     for key in data:
+        if key == "extra image path":
+            img_str = gen_extra_img_string(path, data[key])
+            if not img_str:
+                print("ERR: failed to generate extra images html for " + path)
+                return
+            out = out.replace("<!-- EXTRA IMAGES -->", img_str)
+            continue
         key_cap = key.upper()
         out = out.replace(key_cap, data[key])
     return out
@@ -56,16 +98,16 @@ def handle_file(dest_dir: str) -> bool:
         template_path = sys.argv[2]
     else:
         template_path = "./TEMPLATE.html"
-    
+
     info = read_json(json_path)
     if not info: return False
-    
+
     template_text = read_template(template_path)
     if not template_text: return False
-    
-    template_filled = fill_template(template_text, info)
+
+    template_filled = fill_template(template_text, info, dest_dir)
     if not template_filled: return False
-    
+
     if not write_file(output_path, template_filled): return False
     return True
 
