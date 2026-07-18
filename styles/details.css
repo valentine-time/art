@@ -1,6 +1,7 @@
 .hd {
   display: block;   /* so margin auto works */
-  width: 95%;
+  max-width: 95%;
+  max-height: 90vh;
   margin: 1em auto; /* centre horizontally, add some space vertically */
 }
 
@@ -38,4 +39,5 @@
 .extra-img {
   width: 70vw;
   max-width: 39em;
+  max-height: 50vh;
 }
